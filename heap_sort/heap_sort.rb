@@ -32,7 +32,6 @@ def heapify(arr, ind, size)
         heapify(arr, largest, size)
     end
 
-    print 'i: ', ind, ' l: ', l, ' r: ', r, "\n"
 end
 
 def heap_sort(arr)
@@ -42,11 +41,9 @@ def heap_sort(arr)
     # Build min-heap
     build_max_heap(arr)
 
-    p arr
     for ind in (1...arr.length).to_a.reverse
         # Swap values
         arr[1], arr[ind] = arr[ind], arr[1]
-        p arr
         
         # Apply heapify to index greater than ind
         heapify(arr, 1, ind)
